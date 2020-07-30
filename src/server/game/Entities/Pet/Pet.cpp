@@ -817,6 +817,8 @@ bool Guardian::InitStatsForLevel(uint8 petlevel)
         }
         else
         {
+            petType = HUNTER_PET;
+            m_unitTypeMask |= UNIT_MASK_HUNTER_PET;
             TC_LOG_ERROR("entities.pet", "Unknown type pet %u is summoned by player class %u",
                            GetEntry(), GetOwner()->GetClass());
         }
